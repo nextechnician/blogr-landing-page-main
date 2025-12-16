@@ -1,22 +1,18 @@
 # Frontend Mentor - Blogr landing page solution
 
-This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+-  [Overview](#overview)
+   -  [The challenge](#the-challenge)
+   -  [Screenshot](#screenshot)
+   -  [Links](#links)
+-  [My process](#my-process)
+   -  [Built with](#built-with)
+   -  [What I learned](#what-i-learned)
+   -  [Continued development](#continued-development)
+-  [Author](#author)
 
 ## Overview
 
@@ -24,88 +20,49 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+-  View the optimal layout for the site depending on their device's screen size
+-  See hover states for all interactive elements on the page
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](/preview.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-  Solution URL: (https://github.com/nextechnician/blogr-landing-page-main)
+-  Live Site URL: (https://talay-blogr-landing-page.netlify.app)
 
 ## My process
 
+I built the project using a mobile-first workflow, starting with semantic HTML to lock in the structure before moving on to styling. CSS custom properties were used for consistency, with Flexbox and Grid handling layout where appropriate.
+
+Mobile styles were written first and then progressively enhanced for tablet and desktop with media queries. The main focus was the responsive navigation, which uses the same markup across all breakpoints but changes behavior depending on screen size. On mobile and tablet it functions as a toggleable menu with accordion-style dropdowns, while on desktop it becomes an inline navigation with dropdown menus.
+
+JavaScript was kept minimal and state-based. A single .is-open class controls dropdown state, and CSS handles all visual changes based on that state and the active breakpoint. This kept the logic simple and avoided inline style manipulation. Testing was done frequently in DevTools and across browsers to catch layout and alignment issues early.
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+-  Semantic HTML5 markup
+-  CSS custom properties
+-  Flexbox
+-  CSS Grid
+-  Mobile-first workflow
+-  Vanilla JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project helped solidify my understanding of responsive navigation patterns, especially using the same markup across mobile, tablet, and desktop while changing behavior through CSS and small amounts of JavaScript.
 
-To see how you can add code snippets, see below:
+I learned to manage UI state more cleanly by using a single .is-open class as the source of truth and letting CSS handle all visual changes based on breakpoint. This made the navigation logic easier to reason about and debug.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I also gained more confidence debugging CSS conflicts across breakpoints and browsers, particularly where mobile-first styles need to be explicitly overridden on desktop. Finally, I improved my awareness of basic accessibility by keeping aria-expanded in sync with dropdown state.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+In future projects, I want to continue refining complex responsive navigation patterns, particularly improving keyboard interaction and focus management for dropdown menus. I also want to spend more time tightening CSS architecture across breakpoints to reduce overrides and improve long-term maintainability.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+This project highlighted areas where I can keep improving, such as planning responsive behavior earlier and stress-testing layouts across browsers sooner in the process.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+-  Frontend Mentor - [@nextechnician](https://www.frontendmentor.io/profile/nextechnician)

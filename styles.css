@@ -431,7 +431,6 @@
       cursor: pointer;
 
       display: flex;
-      justify-self: center;
       justify-content: center;
       align-items: center;
    }
@@ -591,10 +590,15 @@
    header nav .nav__trigger {
       width: 100%;
       justify-content: center;
+      gap: 1rem;
    }
 
    header nav .nav__trigger img {
       transition: transform 150ms ease;
+   }
+
+   header nav .nav__arrow-desktop {
+      display: none;
    }
 
    header nav .nav__item.is-open .nav__arrow-mobile {
@@ -700,6 +704,10 @@
       row-gap: 1rem;
    }
 
+   header nav .nav__arrow-mobile {
+      display: none;
+   }
+
    header nav .nav__item.is-open > ul {
       display: grid;
       font-weight: 400;
@@ -707,6 +715,10 @@
 
    header nav .nav__item.is-open > ul li:hover {
       font-weight: 700;
+   }
+
+   header nav .nav__arrow-desktop {
+      display: inline-block;
    }
 
    header nav .nav__item.is-open .nav__arrow-desktop {
@@ -772,10 +784,6 @@
       grid-column: 1/-1;
       padding-bottom: 3rem;
       padding-top: 9rem;
-   }
-
-   .features h2 .feature__content {
-      max-width: 600px;
    }
 
    .feature__content h3,

@@ -31,9 +31,14 @@ navTriggers.forEach((trigger) => {
       navItems.forEach((otherItem) => {
          if (otherItem !== item) {
             otherItem.classList.remove('is-open');
+            otherItem
+               .querySelector('.nav__trigger')
+               .setAttribute('aria-expanded', 'false');
          }
       });
 
       item.classList.toggle('is-open');
+      const isOpen = item.classList.contains('is-open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
    });
 });
